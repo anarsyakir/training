@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container p {
+            color: red;
+        }
+
+        .container p:hover {
+            color: blue;
+        }
+
+        .container2 + p {
+            color: green;
+        }
+
+        .container3 > p {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Judul web</h3>
+        <p>Sample text</p>
+        <p>Sample text</p>
+    </div>
+    <div class="container2">
+        <h3>Judul web app</h3>
+        <p>Sample text</p>
+        <p>Sample text</p>
+    </div>
+    <p>after container</p>
+    <div class="container3">
+        <h3>Judul web app</h3>
+        <p>Sample text</p>
+        <p>Sample text</p>
+    </div>
+</body>
+</html>

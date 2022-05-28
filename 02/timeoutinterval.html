@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh set interval dan set timeout</title>
+</head>
+<body>
+    Silakan tunggu 5 detik untuk menampilkan pesan:
+
+    <h2 id="message"></h2>
+    <button id="buttonHapus" type="button">Hapus text</button>
+    <hr>
+    <p id="welcomeText"></p>
+    <hr>
+    <p id="welcomeText2"></p>
+
+    <script>
+        document.getElementById('buttonHapus').addEventListener('click', hapusText);
+        const panggil = setTimeout(greeting, 5000);
+
+        function greeting(){
+            document.getElementById('message').innerHTML = 'Hello World!';
+        }
+
+        function hapusText() {
+            alert('tunggu 5 detik');
+            setTimeout(function() {
+                document.getElementById('message').style.visibility = 'hidden';
+            }, 5000);
+        }
+
+        //contoh implementasi set interval
+        setInterval(function() {
+            document.getElementById('welcomeText').innerHTML += 'Hello Ana!';
+        }, 5000);
+
+        var array = ['H', 'e', 'l', 'l', 'o', ' ', 'A', 'n', 'a'];
+        var i = 0;
+        var interval = setInterval(function() {
+            document.getElementById('welcomeText2').innerHTML += array[i];
+            i++;
+            if(i == array.length) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

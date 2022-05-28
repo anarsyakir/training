@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP JS</title>
+</head>
+<body>
+    <script>
+        class Hewan {
+            constructor(name, jumlahKaki) {
+                this.name = name;
+                this.jumlahKaki = jumlahKaki;
+            }
+
+            setName(name) {
+                this.name = name;
+            }
+
+            getName() {
+                return this.name;
+            }
+            
+            speak() {
+                console.log(`Hewan ${this.name} bersuara`);
+            }
+
+            eat() {
+                console.log(`Hewan ${this.name} makan`);
+            }
+
+            sleep() {
+                console.log(`Hewan ${this.name} tidur`);
+            }
+        }
+
+        var kambing = new Hewan('Kambing', 4);
+        var ayam = new Hewan('Ayam', 2);
+
+        console.log(kambing);
+        console.log(ayam);
+    </script>
+</body>
+</html>

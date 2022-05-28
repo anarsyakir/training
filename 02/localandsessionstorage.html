@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session storage dan local storage</title>
+</head>
+<body>
+    <div id="first_name"></div>
+    <div id="expired_login"></div>
+    <script>
+        localStorage.setItem('first_name', 'John');
+        document.getElementById('first_name').innerHTML = localStorage.getItem('first_name');
+        localStorage.removeItem('first_name');
+
+        sessionStorage.setItem('expired_login', '2022-05-28');
+        document.getElementById('expired_login').innerHTML = sessionStorage.getItem('expired_login');
+        sessionStorage.removeItem('expired_login');
+    </script>
+</body>
+</html>

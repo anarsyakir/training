@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="btnKlikSaya" type="button">Klik saya</button>
+    <img id="image" src="../02/image/E9oJEJCVEAIynet.jpg" alt="">
+
+    <button id="btn2">Pisah Function</button>
+    <p id="date"></p>
+
+    <br>
+    <br>
+    <button id="backgroundMerah">Add Background</button>
+
+    <script>
+        document.getElementById('btnKlikSaya').addEventListener('click', function() {
+            alert('Saya diklik');
+            document.getElementById('image').style.visibility = 'hidden';
+        });
+
+        document.getElementById('btn2').addEventListener('click', displayDate);
+
+        function displayDate() {
+            document.getElementById('date').innerHTML = Date();
+        }
+
+        document.getElementById('backgroundMerah').addEventListener('click', function() {
+            if(document.body.style.backgroundColor == 'red'){
+                document.getElementById('backgroundMerah').innerHTML = 'Add Background';
+                document.body.style.backgroundColor = '';
+            } else {
+                document.body.style.backgroundColor = 'red';
+                document.getElementById('backgroundMerah').innerHTML = 'Clear Background';
+            }
+        });
+    </script>
+</body>
+</html>
